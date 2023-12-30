@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="login.component.css">
+    <title>Your Website Title</title>
+</head>
+
+<body>
+
+
+    <div class="navbar">
+        <div class="brand">Schaeffler Data Warehouse</div>
+        <div class="login-container">
+            <h2><i class="fas fa-user"></i> Login</h2>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a routerLink="/registration">Register</a>
+                    <a routerLink="login.html">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/Tanishkajagtap12/Data-Warehouse/30201b01fe1baa2c8934138edeefbc452a48b1f1/Schaeffler_frontend/schaeffler-logo.svg"
+                alt="">
+        </div>
+    </div>
+
+    <h3>Login</h3>
+
+    <p class="switch-form">If you don't have an account you can <a routerLink="/registration">Register Here. ></a></p>
+
+    <form id="login-form">
+
+        <h4 class="h4-responsive">Already registered?</h4>
+        <div class="form-group">
+            <label for="username">User Name*</label>
+            <input type="text" id="username" name="username" class="login-input" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password*</label>
+            <input type="password" id="password" name="password" class="login-input" required>
+        </div>
+
+    </form>
+
+
+    <div class="checkbox-container">
+        <input class="custom-checkbox" type="checkbox" id="remind-me">
+        <label for="remind-me">Remember me</label>
+    </div>
+    <div>
+        <!-- ... existing code ... -->
+
+        <div>
+            <a class="green-button" routerLink="/central" onclick="validateForm()">Login</a>
+
+        </div>
+        <div id="status-line"></div>
+
+        <p class="switch-form">If you forgot your password you can <a href="registration.component.html">Reset Here.
+                ></a></p>
+
+        <!-- ... existing code ... -->
+
+    </div>
+    <div id="image-container">
+
+        <img src="https://github.com/Tanishkajagtap12/Data-Warehouse1/blob/main/Schaeffler_frontend%20(2)/Schaeffler_frontend/PartnerProgram_Keyvisual.jpg?raw=true"
+            alt="Your Image">
+    </div>
+    <div class="container">
+        <!-- Rest of your content goes here -->
+        <script src="login.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<div class="navbar">
+    <div class="brand">Schaeffler Data Warehouse</div>
+    <div class="login-container">
+        <a routerLink='/developer_dashboard'></a>
+        <a routerLink='/login' class="logout-button">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+        </a>
+        <div class="logo"><img
+                src="https://raw.githubusercontent.com/Tanishkajagtap12/Data-Warehouse/30201b01fe1baa2c8934138edeefbc452a48b1f1/Schaeffler_frontend/schaeffler-logo.svg"
+                alt="Your Logo"></div>
+
+    </div>
+</div>
+<div class="container">
+    <button class="add-project" (click)="toggleButton()">Add Project</button>
+    <button (click)="exportToExcel()">Export</button>
+
+    <form [formGroup]="projectForm" *ngIf="projectFormVisible">
+        <div class="grid-container">
+            <div class="right">
+                <label for="projectName" a>Project Name</label>
+                <input type="text" id="projectName" formControlName="projectName" placeholder="Enter Project Name">
+            </div>
+            <div class="left">
+                <label for="projectClassification">Project Classification</label>
+                <input type="text" id="projectClassification" formControlName="projectClassification"
+                    placeholder="Enter Classification">
+            </div>
+            <div class="right">
+                <label for="projectType">Project Type</label>
+                <input type="text" id="projectType" formControlName="projectType" placeholder="Enter Project Type">
+            </div>
+            <div class="left">
+                <label for="projectNumber">Project Number</label>
+                <input type="text" id="projectNumber" formControlName="projectNumber"
+                    placeholder="Enter Project Number">
+            </div>
+            <div class="right">
+                <label for="asil">ASIL</label>
+                <input type="text" id="asil" formControlName="asil" placeholder="Enter ASIL">
+            </div>
+
+            <button type="button" class="submit-button" (click)="addProject()">Submit</button>
+        </div>
+    </form>
+
+    <table id="projectTable">
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>Project Classification</th>
+                <th>Project Type</th>
+                <th>Project Number</th>
+                <th>ASIL</th>
+
+                <th>OverAll Status</th>
+                <th>HW</th>
+                <th>SYS</th>
+                <th>EE</th>
+                <th>SW</th>
+                <th>ME</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let project of projects">
+                <td>
+                    <a [routerLink]="['/developerdashboard', project.projectName, project.projectNumber]">
+                        {{ project.projectName }}
+                    </a>
+                </td>
+                <td>{{ project.projectClassification }}</td>
+                <td>{{ project.projectType }}</td>
+                <td>{{ project.projectNumber }}</td>
+                <td>{{ project.asil }}</td>
+                <!-- <td [ngClass]="getLabelStyle(project.overallStatus)">{{ project.overallStatus }}</td>
+                <td [ngClass]="getLabelStyle(project.hw)">{{ project.hw }}</td>
+                <td [ngClass]="getLabelStyle(project.sys)">{{ project.sys }}</td>
+                <td [ngClass]="getLabelStyle(project.ee)">{{ project.ee }}</td>
+                <td [ngClass]="getLabelStyle(project.sw)">{{ project.sw }}</td>
+                <td [ngClass]="getLabelStyle(project.me)">{{ project.me }}</td> -->
+                <td [ngClass]="getBgStyle(project.overallStatus)"></td>
+<td [ngClass]="getBgStyle(project.hw)"></td>
+<td [ngClass]="getBgStyle(project.sys)"></td>
+<td [ngClass]="getBgStyle(project.ee)"></td>
+<td [ngClass]="getBgStyle(project.sw)"></td>
+<td [ngClass]="getBgStyle(project.me)"></td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>

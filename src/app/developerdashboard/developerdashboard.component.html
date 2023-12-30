@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <title>Developer Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="developerdashboard.component.css">
+    <img src="" alt="">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="brand">Schaeffler Data Warehouse</div>
+        <div class="login-container">
+            <a routerLink='/login' class="logout-button">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+            <div class="logo"><img
+                    src="https://raw.githubusercontent.com/Tanishkajagtap12/Data-Warehouse/30201b01fe1baa2c8934138edeefbc452a48b1f1/Schaeffler_frontend/schaeffler-logo.svg"
+                    alt="Your Logo"></div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dashboard">
+            <h1>Project Team</h1>
+            <ul class="options">
+                <li>
+                    <a routerLink="cover-page" routerLinkActive="active_menu_link">Cover Page</a>
+                </li>
+                <li>
+                    <a routerLink="projectmaster" routerLinkActive="active_menu_link">Project Master</a>
+                </li>
+                <li>
+                    <a routerLink="developmentmaturity1" routerLinkActive="active_menu_link">Development Maturity
+                        (1/2)</a>
+                </li>
+                <li>
+                    <a routerLink="maturity-development2" routerLinkActive="active_menu_link">Development Maturity
+                        (2/2)</a>
+                </li>
+                <li>
+                    <a routerLink="quality-overview" routerLinkActive="active_menu_link">Quality Overview</a>
+                </li>
+                <li>
+                    <a routerLink="timestatus" routerLinkActive="active_menu_link">Time Status</a>
+                </li>
+                <li>
+                    <a routerLink="coststatus" routerLinkActive="active_menu_link">Cost Status</a>
+                </li>
+                <li>
+                    <a routerLink="riskoverview" routerLinkActive="active_menu_link">Risk Overview</a>
+                </li>
+                <!-- Add other links for components -->
+            </ul>
+        </div>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</body>
+
+</html>

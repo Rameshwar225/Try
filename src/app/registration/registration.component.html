@@ -1,0 +1,94 @@
+<!-- <p>registration works!</p> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="registration.component.css">
+    <title>Your Website Title</title>
+</head>
+
+<body>
+    <a routerLink="/navbar1"></a>
+
+    <div class="navbar">
+        <div class="brand">Schaeffler Data Warehouse</div>
+        <div class="login-container">
+            <h2><i class="fas fa-user"></i> Login</h2>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a routerLink="/registration">Register</a>
+                    <a routerLink="login.html">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/Tanishkajagtap12/Data-Warehouse/30201b01fe1baa2c8934138edeefbc452a48b1f1/Schaeffler_frontend/schaeffler-logo.svg"
+                alt="">
+        </div>
+    </div>
+    <h3>Registration</h3>
+
+    <div class="container">
+
+
+        <div class="registration-form">
+            <div class="form-group">
+                <label for="salutation">Salutation*</label>
+                <div class="radio-group">
+                    <input type="radio" id="ms" name="salutation" value="Ms." checked>
+                    <label for="ms">Ms.</label>
+                    <input type="radio" id="mr" name="salutation" value="Mr.">
+                    <label for="mr">Mr.</label>
+                </div>
+            </div>
+
+            <div class="form-group left">
+                <label for="first-name">First Name*</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="form-group right">
+                <label for="last-name">Last Name*</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="form-group left">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group right">
+                <label for="username">User Name*</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label>Login as*</label>
+                <div class="radio-group">
+                    <input type="radio" id="business-head" name="login-type" value="Business Head" checked>
+                    <label for="business-head">Business Head</label>
+                    <input type="radio" id="developer-team" name="login-type" value="Developer Team">
+                    <label for="developer-team">Developer Team</label>
+                </div>
+            </div>
+
+            <div class="form-group left">
+                <label for="password">Create a Password*</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group right">
+                <label for="repeat-password">Repeat Password*</label>
+                <input type="password" id="repeat-password" name="repeat-password" required>
+            </div>
+
+            <div class="form-group">
+                <a routerLink='/login' class="register-button">REGISTER</a>
+
+            </div>
+        </div>
+    </div>
